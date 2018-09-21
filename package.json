@@ -1,5 +1,5 @@
 {
-  "name": "devutils",
+  "name": "std-nice",
   "version": "1.0.0",
   "description": "NodeJS tool for fancy object display.",
   "main": "./lib/src/devutils.js",
@@ -16,14 +16,17 @@
     "dev"
   ],
   "author": "COTEP",
-  "contributors": [{
-    "name": "Gregory Neut <g.neut@cotep.com>"
-  }, {
-    "name": "Alrick Emilien <a.emilien@cotep.com>"
-  }],
+  "contributors": [
+    {
+      "name": "Gregory Neut <g.neut@cotep.com>"
+    },
+    {
+      "name": "Alrick Emilien <a.emilien@cotep.com>"
+    }
+  ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/accecor-cotep/std-nice.git"
+    "url": "https://github.com/COTEP-DEV/std-nice.git"
   },
   "license": {
     "type": "MIT",
@@ -55,8 +58,11 @@
   "dependencies": {
     "colors": "^1.3.2"
   },
-  "engines" : {
-    "node" : ">=10.0.0"
+  "engines": {
+    "node": ">=10.0.0"
   },
-  "os" : [ "darwin", "linux" ]
+  "os": [
+    "darwin",
+    "linux"
+  ]
 }

@@ -1,12 +1,12 @@
 # std-nice
 
-`std-nice` is a tool to log objects in NodeJS for dev environnement.
+`std-nice` is a tool to log objects in [Node.js](https://nodejs.org/) for dev environnement.
 
 ![](https://raw.githubusercontent.com/COTEP-DEV/std-nice/master/assets/example.png)
 
 ### Installation
 
-std-nice requires [Node.js](https://nodejs.org/) v10+ to run.
+std-nice requires [Node.js](https://nodejs.org/) v8+ to run.
 
 Install and start the server.
 
@@ -15,9 +15,9 @@ $ npm i devutils
 ```
 ### Example
 
-#### Require the dev util
+#### Require std-nice
 ```js
-const std-nice = require('std-nice');
+const stdnice = require('std-nice');
 const mongoose = require('mongoose');
 
 const obj = {
@@ -34,12 +34,29 @@ const obj = {
 
 obj.reference = obj;
 
-std-nice.sd(obj);
-std-nice.sd([]);
-std-nice.sd(42);
+stdnice.sd(obj);
+stdnice.sd([]);
+stdnice.sd(42);
 ```
 
-#### Or use it globally
+#### Import std-nice
+```js
+import stdnice from 'std-nice';
+
+const obj = {
+	messages: [{
+		type : 1,
+		value: "fefzfzefzef",
+	}, {
+		type : 0,
+		value: "aaaaaaaaaa",
+	}],
+};
+
+stdnice.sd(obj);
+```
+
+#### You can use it globally
 
 In your index.js :
 ```js
@@ -60,7 +77,7 @@ global.LOG.sd(messages);
 
 ### Plugins
 
-Devutils is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
+std-nice is currently extended with the following plugins.
 
 | Plugin | Github |
 | ------ | ------ |
@@ -68,10 +85,15 @@ Devutils is currently extended with the following plugins. Instructions on how t
 
 # Provided by
 
-[![N|Solid](http://www.cotep.fr/wp-content/uploads/2016/09/logo_home-1.jpg)](https://cotep.fr)
+[![N|Solid](https://www.cotep.fr/wp-content/uploads/2016/09/logo_home-1.jpg)](https://cotep.fr)
+
+Contributors
+----
+
+g.neut
+a.emilien
 
 License
 ----
 
 MIT
-
