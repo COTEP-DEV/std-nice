@@ -233,6 +233,3 @@ export default class Devutils {
     else Devutils.d(x);
   }
 }
-
-// export the var to other files using GLOBAL variable
-global.DEV = Devutils;
