@@ -8,10 +8,10 @@
 
 std-nice requires [Node.js](https://nodejs.org/) v8+ to run.
 
-Install and start the server.
+Install and start to code.
 
 ```sh
-$ npm i devutils
+$ npm i std-nice
 ```
 ### Example
 
@@ -85,7 +85,7 @@ std-nice is currently extended with the following plugins.
 
 # Provided by
 
-[![N|Solid](https://www.cotep.fr/wp-content/uploads/2016/09/logo_home-1.jpg)](https://cotep.fr)
+[![N|Solid](https://www.cotep.fr/wp-content/uploads/2018/09/logo_home-1.jpg)](https://cotep.fr)
 
 Contributors
 ----
