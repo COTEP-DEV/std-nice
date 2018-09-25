@@ -2,7 +2,7 @@
   "name": "std-nice",
   "version": "1.0.2",
   "description": "NodeJS tool for fancy object display.",
-  "main": "./lib/src/devutils.js",
+  "main": "./build/src/devutils.js",
   "scripts": {
     "build": "grunt default",
     "postversion": "git push && git push --tags",
