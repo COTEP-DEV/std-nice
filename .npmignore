@@ -4,7 +4,7 @@ Gruntfile.js
 node_modules/
 tests/
 src/
-lib/**/*.map
-lib/tests/
+build/**/*.map
+build/tests/
 assets/
 mocha.opts

@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 				expand: true,
 				src: ['src/**/*.js', 'tests/**/*.js'],
 				ext: '.js',
-				dest: './lib/',
+				dest: './build/',
 			},
 		},
 	});

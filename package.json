@@ -5,10 +5,9 @@
   "main": "./lib/src/devutils.js",
   "scripts": {
     "build": "grunt default",
-    "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags",
     "prepare": "npm run build",
-    "test": "npm run build && cd ./lib && mocha -t 30000 -Sb \"tests/*.js\" && cd ../"
+    "test": "npm run build && cd ./build && mocha -t 30000 -Sb \"tests/*.js\" && cd ../"
   },
   "keywords": [
     "nodejs",
