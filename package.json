@@ -1,6 +1,6 @@
 {
   "name": "std-nice",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "NodeJS tool for fancy object display.",
   "main": "./lib/src/devutils.js",
   "scripts": {
