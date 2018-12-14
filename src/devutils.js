@@ -28,6 +28,15 @@ export default class Devutils {
   }
 
   /**
+   * Used to display the texts
+   */
+  static display(str) {
+    Utils.displayMessage({
+      str,
+    });
+  }
+
+  /**
    * Singleton Implementation
    */
   static getInstance() {
@@ -86,7 +95,7 @@ export default class Devutils {
         const circular = stack.find(y => y.value === ptr);
 
         if (circular) {
-            strsParts.push(colors.cyan(`[Circular -> ${circular.key}],\n`));
+          strsParts.push(colors.cyan(`[Circular -> ${circular.key}],\n`));
 
           return;
         }
@@ -192,12 +201,9 @@ export default class Devutils {
      * Starts here
      */
 
-
     displayOneLevel(x);
 
-    Utils.displayMessage({
-      str: Utils.monoline(strsParts),
-    });
+    Devutils.display(Utils.monoline(strsParts));
   }
 
   /**
@@ -206,9 +212,7 @@ export default class Devutils {
    * @param {Object} x
    */
   static d(x) {
-    Utils.displayMessage({
-      str: `${x}`.red,
-    });
+    Devutils.display(`${x}`.red);
   }
 
   /**
@@ -217,9 +221,7 @@ export default class Devutils {
    * @param {Object} x
    */
   static dre(x) {
-    Utils.displayMessage({
-      str: String(x).bgRed.bold.white,
-    });
+    Devutils.display(String(x).bgRed.bold.white);
   }
 
   /**
