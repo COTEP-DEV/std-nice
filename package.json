@@ -1,6 +1,6 @@
 {
-  "name": "std-nice",
-  "version": "1.0.3",
+  "name": "@cotep/std-nice",
+  "version": "1.0.4",
   "description": "NodeJS tool for fancy object display.",
   "main": "./build/src/devutils.js",
   "scripts": {

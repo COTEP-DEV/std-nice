@@ -1,6 +1,6 @@
-# std-nice
+# @cotep/std-nice
 
-`std-nice` is a tool to log objects in [Node.js](https://nodejs.org/) for dev environnement.
+`@cotep/std-nice` is a tool to log objects in [Node.js](https://nodejs.org/) for dev environnement.
 
 ![](https://raw.githubusercontent.com/COTEP-DEV/std-nice/master/assets/example.png)
 
@@ -11,13 +11,13 @@ std-nice requires [Node.js](https://nodejs.org/) v8+ to run.
 Install and start to code.
 
 ```sh
-$ npm i std-nice
+$ npm i --save @cotep/std-nice
 ```
 ### Example
 
 #### Require std-nice
 ```js
-const stdnice = require('std-nice');
+const stdnice = require('@cotep/std-nice');
 const mongoose = require('mongoose');
 
 const obj = {
@@ -41,7 +41,7 @@ stdnice.sd(42);
 
 #### Import std-nice
 ```js
-import stdnice from 'std-nice';
+import stdnice from '@cotep/std-nice';
 
 const obj = {
 	messages: [{
@@ -60,7 +60,7 @@ stdnice.sd(obj);
 
 In your index.js :
 ```js
-global.LOG = require('std-nice');
+global.LOG = require('@cotep/std-nice');
 ```
 In foo.js :
 ```js
