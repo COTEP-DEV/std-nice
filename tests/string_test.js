@@ -7,4 +7,6 @@ describe('String tests', () => {
   it('empty string', () => Devutils.sd(''));
 
   it('String(string)', () => Devutils.sd(String('Bonjour')));
+
+  it('Multiple strings', () => Devutils.sd('salut', 'comment ca va?'));
 });
