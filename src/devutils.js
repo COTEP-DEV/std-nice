@@ -227,14 +227,12 @@ export default class Devutils {
    * @param {Object} x
    */
   static sd(...args) {
-    const str = Utils.monoline(args.map((x) => {
+    Devutils.display(Utils.monoline(args.map((x) => {
       if (x instanceof Error) return Devutils.dre(x);
 
       if (Utils.isAJSON(x)) return Devutils.djson(x);
 
       return Devutils.d(x);
-    }).map((x, xi) => (xi > 0 ? ` / ${x}` : x)));
-
-    Devutils.display(`${str}\n`);
+    }).map((x, xi) => (xi > 0 ? ` / ${x}` : x))));
   }
 }
