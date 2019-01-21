@@ -67,7 +67,6 @@ export default class Devutils {
       for (let i = 0; i < level; i += 1) strsParts.push('    ');
     };
 
-
     /*
      * @function
      * display one level of a json
@@ -85,10 +84,8 @@ export default class Devutils {
 
         strsParts.push('],\n'.white);
 
-
         return;
       }
-
 
       // We have a json
       if (Utils.isAJSON(ptr) && !Utils.isAMongooseObjectId(ptr) && !(ptr instanceof Date)) {
@@ -120,7 +117,7 @@ export default class Devutils {
         displayIndent(indent);
 
         if (indent) strsParts.push('},\n'.white);
-        else strsParts.push('}\n'.white);
+        else strsParts.push('}'.white);
 
         return;
       }
@@ -203,7 +200,7 @@ export default class Devutils {
 
     displayOneLevel(x);
 
-    Devutils.display(Utils.monoline(strsParts));
+    return Utils.monoline(strsParts);
   }
 
   /**
@@ -212,7 +209,7 @@ export default class Devutils {
    * @param {Object} x
    */
   static d(x) {
-    Devutils.display(`${x}`.red);
+    return `${x}`.red;
   }
 
   /**
@@ -221,7 +218,7 @@ export default class Devutils {
    * @param {Object} x
    */
   static dre(x) {
-    Devutils.display(String(x).bgRed.bold.white);
+    return String(x).bgRed.bold.white;
   }
 
   /**
@@ -229,9 +226,13 @@ export default class Devutils {
    * You gives something in enter and display it (Json or other)
    * @param {Object} x
    */
-  static sd(x) {
-    if (x instanceof Error) Devutils.dre(x);
-    else if (Utils.isAJSON(x)) Devutils.djson(x);
-    else Devutils.d(x);
+  static sd(...args) {
+    Devutils.display(Utils.monoline(args.map((x) => {
+      if (x instanceof Error) return Devutils.dre(x);
+
+      if (Utils.isAJSON(x)) return Devutils.djson(x);
+
+      return Devutils.d(x);
+    }).map((x, xi) => (xi > 0 ? ` / ${x}` : x))));
   }
 }
