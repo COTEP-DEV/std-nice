@@ -74,4 +74,16 @@ describe('Basic tests', () => {
 
     return Devutils.sd(obj);
   });
+
+
+  it('Object with null', () => Devutils.sd({
+    1: {
+      2: {
+        3: 'Troisieme etage',
+        4: null,
+      },
+
+      key: null,
+    },
+  }));
 });

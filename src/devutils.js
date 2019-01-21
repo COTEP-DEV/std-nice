@@ -171,7 +171,7 @@ export default class Devutils {
         }, {
           check: Utils.isNull,
 
-          do: () => `${colors.bgRed.white.bold.underline(ptr)}${commaJump}`,
+          do: () => `${colors.bgRed.white.bold.underline('null')}${commaJump}`,
         }, {
           check: Utils.isAString,
 
