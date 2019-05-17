@@ -40,7 +40,7 @@ export default class Utils {
 
     if (typeof v === 'object') return true;
 
-    if (!Utils.isAString(v)) return false;
+    if (Utils.isAString(v)) return false;
 
     // Test a json contains {} or [] data in it
     const regexpJson = /(({*})|(\[*\]))+/;

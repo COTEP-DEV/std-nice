@@ -8,5 +8,19 @@ describe('String tests', () => {
 
   it('String(string)', () => Devutils.sd(String('Bonjour')));
 
+  it('JSON.stringigy(obj)', () => Devutils.sd(JSON.stringify({
+    babel: {
+      options: {
+        sourceMap: true,
+      },
+      files: {
+        expand: true,
+        src: ['src/**/*.js', 'tests/**/*.js'],
+        ext: '.js',
+        dest: './build/',
+      },
+    },
+  })));
+
   it('Multiple strings', () => Devutils.sd('salut', 'comment ca va?'));
 });
